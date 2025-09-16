@@ -1,0 +1,4 @@
+/* Ajoutez vos styles ici */
+html, body { height: 100%; }
+body { margin: 0; background: #fff; color: #111; }
+#app { min-height: 100%; }

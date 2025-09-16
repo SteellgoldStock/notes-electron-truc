@@ -1,0 +1,37 @@
+{
+  "name": "electron-blank-window",
+  "version": "1.0.1",
+  "description": "Starter pack: a blank Electron window ready for your HTML/CSS/JS, with robust dev/prod path handling and quick packaging.",
+  "main": "src/main.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "setup": "npm i -D electron@latest electron-builder@latest",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "asar": true,
+    "appId": "com.example.blankwindow",
+    "productName": "Blank Window",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  }
+}
