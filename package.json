@@ -7,6 +7,8 @@
   "license": "MIT",
   "scripts": {
     "setup": "npm i -D electron@latest electron-builder@latest",
+    "build-css": "tailwindcss -i src/renderer/styles.css -o src/renderer/styles.css --watch",
+    "dev": "npm run build-css & electron .",
     "start": "electron .",
     "dist": "electron-builder"
   },
@@ -33,5 +35,16 @@
         "AppImage"
       ]
     }
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "electron": "^38.1.0",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "marked": "^16.3.0"
   }
 }
